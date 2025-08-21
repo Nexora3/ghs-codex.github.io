@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>GHS Codex PRO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>GHS Codex PRO</h1>
+</header>
+<nav>
+    <button onclick="showTab('chat')">Chat AI</button>
+    <button onclick="showTab('code')">Code AI</button>
+    <button onclick="showTab('art')">Art AI</button>
+    <button onclick="showTab('tools')">RP / Tools</button>
+    <button onclick="showTab('files')">Файлы</button>
+    <button onclick="showTab('images')">Скрины</button>
+</nav>
+<main>
+    <div id="chat" class="tab"></div>
+    <div id="code" class="tab"></div>
+    <div id="art" class="tab"></div>
+    <div id="tools" class="tab"></div>
+    <div id="files" class="tab"></div>
+    <div id="images" class="tab"></div>
+</main>
+<script src="js/utils.js"></script>
+<script src="js/chatAI.js"></script>
+<script src="js/codeAI.js"></script>
+<script src="js/artAI.js"></script>
+<script src="js/toolsAI.js"></script>
+<script src="js/fileAI.js"></script>
+<script src="js/imageAI.js"></script>
+<script>
+function showTab(tab) {
+    document.querySelectorAll('.tab').forEach(t => t.style.display = 'none');
+    document.getElementById(tab).style.display = 'block';
+}
+showTab('chat'); // по умолчанию открыта вкладка Chat AI
+</script>
+</body>
+</html>
